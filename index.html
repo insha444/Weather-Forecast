@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Extraordinary Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-bar">
+    <label for="themeSelector">🌈 Theme:</label>
+    <select id="themeSelector" onchange="changeTheme()">
+      <option value="light">Light</option>
+      <option value="sky">Sky</option>
+      <option value="monsoon">Monsoon</option>
+    </select>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>📍 Location</h2>
+      <select id="stateSelect">
+        <option value="Delhi">Delhi</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <!-- Add more states -->
+      </select>
+      <button onclick="getWeather()">Get Weather</button>
+
+      <div class="average-weather">
+        <h3>🌡 Avg Weather in India</h3>
+        <p>Max: 32°C</p>
+        <p>Min: 20°C</p>
+        <p>Humidity: 60%</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <h1>🌦 Weather Forecast</h1>
+      <div id="weatherResult" class="weather-card">Select a state to see weather.</div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
